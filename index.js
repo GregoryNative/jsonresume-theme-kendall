@@ -151,9 +151,28 @@ function render(resumeObject) {
         });
     }
 
+    if (resumeObject.petProjects && resumeObject.petProjects.length) {
+        if (resumeObject.petProjects[0].name) {
+            resumeObject.petProjectsBool = true;
+        }        
+    }
+
     if (resumeObject.projects && resumeObject.projects.length) {
         if (resumeObject.projects[0].name) {
             resumeObject.projectsBool = true;
+            _.each(resumeObject.projects, function(e){
+                if (e.stack && e.stack.length) {
+                    e.stackBool = true;
+                }
+
+                if (e.iosLink && e.iosLink.length) {
+                    e.iosLinkBool = true;
+                }
+
+                if (e.androidLink && e.androidLink.length) {
+                    e.androidLinkBool = true;
+                }
+            });
         }
     }
 
@@ -248,6 +267,11 @@ function render(resumeObject) {
 
     return resumeHTML;
 };
+
 module.exports = {
     render: render
 }
+
+// test
+// var resumeJson = require("../resume.json");
+// render(resumeJson);

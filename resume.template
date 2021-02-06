@@ -52,7 +52,7 @@
                 <div class="row">
                   <div class="details">
                     <div class="where">
-                      {{name}}
+                      {{company}}
                       {{#location}}
                       <div class="pull-right">
                         {{location}}
@@ -154,12 +154,56 @@
             <ul class="list-group">
               {{#projects}}
               <li class="list-group-item">
-                <span style="font-weight:bold">{{name}}</span>: {{description}}
+                <span style="font-weight:bold">{{name}}</span>
+                {{#iosLinkBool}}
+                  <a href="{{iosLink}}" class="badge skill market-ios">
+                    <span>
+                      <i class="fab fa-apple ico"></i> App Store
+                    </span>
+                  </a>
+                {{/iosLinkBool}}
+                {{#androidLinkBool}}
+                  <a href="{{androidLink}}" class="badge skill market-android">
+                    <span>
+                      <i class="fab fa-google-play ico"></i> Google Play
+                    </span>
+                  </a>
+                {{/androidLinkBool}}
+                <div class="mt-2">
+                  <span>{{description}}</span>
+                </div>
+                {{#stackBool}}
+                <div class="mt-2">
+                  {{#stack}}
+                  <div class="project-stack-group-item">
+                    <span class="badge skill">{{{.}}}</span>
+                  </div>
+                  {{/stack}}
+                </div>
+                {{/stackBool}}
               </li>
               {{/projects}}
             </ul>
           </div>
           {{/projectsBool}}
+          {{#petProjects}}
+            <!-- PET PROJECTS -->
+            <div class="box">
+              <h2><i class= "fas fa-paw ico"></i> Pet Projects</h2>
+              <ul class="list-group">
+                {{#petProjects}}
+                <li class="list-group-item petproject-item">
+                  <span style="font-weight:bold"><img src="./repo.svg" /> {{name}}</span>
+                  <span class="mt-2 mb-3">{{description}}</span>
+                  <div>
+                    <span class="repo-language-color" style="background-color: #f1e05a"></span><span> {{languages}}</span>
+                    <span class="ml-2"><i class= "far fa-star"></i> {{stars}}</span>
+                  </div>
+                </li>
+                {{/petProjects}}
+              </ul>
+            </div>
+          {{/petProjects}}
         </div>
         <div class="col-xs-12 col-sm-5">
           <!-- CONTACT -->
@@ -326,6 +370,5 @@
         </div>
       </div>
     </div>
-
   </body>
 </html>

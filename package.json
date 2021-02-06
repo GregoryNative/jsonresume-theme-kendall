@@ -1,12 +1,12 @@
 {
-  "name": "jsonresume-theme-kendall",
+  "name": "jsonresume-theme-kendall-modern",
   "version": "0.2.0",
   "description": "A JSON Resume theme built with bootstrap",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "M. Adam Kendall",
+  "author": "Gregory Galushka <gregorygalushka@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "gravatar": "^1.0.6",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/linuxbozo/jsonresume-theme-kendall.git"
+    "url": "https://github.com/GregoryNative/jsonresume-theme-kendall-modern.git"
   },
   "keywords": [
     "json",
@@ -23,7 +23,7 @@
     "theme"
   ],
   "bugs": {
-    "url": "https://github.com/linuxbozo/jsonresume-theme-kendall/issues"
+    "url": "https://github.com/GregoryNative/jsonresume-theme-kendall-modern/issues"
   },
-  "homepage": "https://github.com/linuxbozo/jsonresume-theme-kendall"
+  "homepage": "https://github.com/GregoryNative/jsonresume-theme-kendall-modern"
 }
